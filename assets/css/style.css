@@ -1,0 +1,258 @@
+body, html {
+    height:100%;
+}
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body, p, li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+
+form {
+    font-size: 11px;
+}
+
+aside /*, footer */ {
+    color: white;
+}
+
+aside h1, aside h2, aside h3, aside h4, aside h5, aside h6
+/*, footer h1, footer h2, footer h3, footer h4, footer h5, footer h6*/ {
+    color: white;
+}
+
+footer h3, footer p {
+     text-align: left;   
+}
+
+hr {
+    border: none;
+    border-top: 1px solid silver;
+    margin: 0.5em 0;
+    /*border-top: 1px solid rgba(255, 255, 255, 0.4);*/
+}
+
+.fullWidth {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+}
+
+.l-box {
+    padding: 1em;
+}
+
+ul.fitWidth, ul.fitHeight {
+    margin: 0;
+}
+
+.fitWidth, li.fitWidth {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fitHeight, li.fitHeight {
+    padding-top: 0;
+    padding-bottom: 0;  
+}
+
+.button {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+/*  */
+.page-wrapper {
+    height: auto !important;
+    min-height: 100%;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    background-color: #575852;
+
+    height: auto !important;
+    min-height: 100%;}
+
+.main-content-wrapper {
+    background-color: #ffffff;
+}
+
+.logo {
+    height: 118px;
+    text-align: center;
+}
+
+.logo > div {
+    position: relative; display: inline-block;
+}
+
+.about {
+    height: 420px; background-color: #373832;
+}
+
+.social-icons > a {
+    background-color: #bbb; display: inline-block; padding: 4px;
+}
+
+.search-box {
+    float: right;
+}
+
+.articles > li > div {
+    height: 420px;
+}
+
+.articles > li.featured {
+    width: 100%;
+    padding: 0 0.9375rem;   
+    background-color: #2ba6cb;
+}
+
+.articles > li.featured .image {
+    overflow: hidden;
+}
+
+.articles > li.featured .image,
+.articles > li.featured .image > a,
+.articles > li.featured .image > a > img
+{
+    height: 420px; 
+}
+
+.articles > li.featured a {
+    color: white;
+}
+
+.articles > li.featured .description {
+    color: white; height: 100%;
+}
+
+.articles > li.normal .description {
+    margin-top: -0.75em;
+}
+
+.articles > li.normal .image, .articles > li.normal .image > img {
+    height: 300px;
+}
+
+article .article-content > p > img:before {
+    content: "<div class='fitImage'>";
+}
+
+article .article-content > p >img:after {
+    content: "</div>";
+}
+
+article .article-content > p {
+     margin-left: 200px;   
+}
+
+article .sidenote {
+    width: 180px;
+    float: left;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+article .article-content > .sidenote > p {
+     margin-left: 0;
+}
+
+article .article-content .fitImage {
+    margin: 2em -2.15em;
+}
+
+.pagination {
+    height: 32px;
+    vertical-align: middle;
+    text-align: center;
+    color: silver;
+    font-style: italic;
+}
+
+ul.country-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.country-list > li {
+    text-decoration: uppercase;
+}
+
+ul.country-list > li > a {
+    color: #fff;
+    width: 100%;
+    line-height: 32px;
+    height: 32px;
+    display: block;
+    padding-left: 2em;
+}
+
+ul.country-list > li > a:hover {
+    background-color: #2ba6cb;
+    color: #fff;
+}
+
+a.centered-image {
+    display: block;
+}
+
+.centered-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.centered-image > img {
+    position: absolute;
+    overflow: hidden;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    max-width: none;
+}
+
+.small-text {
+    font-size: 0.8em;
+}
+
+.icon-text {
+    color: darkgray;
+    font-style: italic;
+    padding: 8px 20px;
+}
+
+.icon-text.tag {
+    background: url(/assets/images/icons/tag.png) left no-repeat;   
+    background-size: 18px auto;
+}
+
+.icon-text.time {
+    background: url(/assets/images/icons/calendar.png) left no-repeat;   
+}
+
+.icon-text.comment {
+    background: url(/assets/images/icons/comments.png) left no-repeat;   
+}
+
+.icon-text.link {
+    background: url(/assets/images/icons/link.png) left no-repeat;   
+}
+
+.icon-text.marker {
+    background: url(/assets/images/icons/marker.png) left no-repeat;   
+}

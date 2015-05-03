@@ -1,0 +1,20 @@
+{{#if author}}
+{{#author}}
+<footer style="padding: 40px 0;">
+    <address style="text-align: center;" itemscope itemtype="http://schema.org/Person">
+        <hr>
+        {{#if image}}
+        <div style="display: inline-block; border: solid #ccc 1px; border-radius: 50%; margin-top: -48px;">
+            <a href="{{url}}" style="display: inline-block; border: solid white 4px; border-radius: 50%; float: left; overflow: hidden; height: 80px; width: 80px; ">
+                <img src="{{image}}" alt="{{name}}"  itemprop="image" />
+            </a>
+        </div>
+        {{/if}}
+        <h3><span itemprop="author">{{name}}</span></h3>
+    </address>
+    <p>{{bio}}</p>
+    <span class="icon-text marker">{{location}}</span>
+    <span class="icon-text link"><a href="{{website}}">{{website}}</a></span>
+</footer>
+{{/author}}
+{{/if}}

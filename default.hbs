@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{! Document Settings }}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {{! Responsive Meta Tags }}
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>{{meta_title}}</title>
+        <meta name="description" content="{{meta_description}}" />
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/assets/css/normalize.css">
+        <link rel="stylesheet" href="/assets/css/foundation.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+        <script src="/assets/js/vendor/modernizr.js"></script>
+        <script src="/assets/js/vendor/jquery.js"></script>
+        <script src="/assets/js/vendor/underscore-min.js"></script>
+        <script src="/assets/js/foundation.min.js"></script>
+
+        {{ghost_head}}
+    </head>
+    <body class="{{body_class}}" style="background: url({{@blog.cover}}) no-repeat; background-size: cover; background-attachment: fixed;">
+        <div class="page-wrapper">
+            <div class="row fullWidth content-wrapper">
+                <aside class="medium-3 large-2 columns fitWidth">
+                    <div class="l-box logo fitWidth">
+                        <div>
+                            {{#if @blog.logo}}
+                            <a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                            {{else}}
+                            <h2><a href="{{@blog.url}}">{{@blog.title}}</a></h2>
+                            {{/if}}
+                            <span style="top: 40px; right: 1px; position: absolute;">.org.ua</span>
+                            <span class="small-text">{{@blog.description}}</span>
+                        </div>
+                    </div>
+
+                    <div class="about">
+                        <div class="l-box">
+                            <h3>Про нас</h3>
+                            <p>Blah-blah-blah...</p>
+                        </div>
+                    </div>
+
+                    <div class="countries">
+                        <div class="l-box">
+                            <h3>Країни</h3>
+                        </div>
+                        <ul class="country-list">
+                            <li><a href="#">Австрія</a></li>
+                            <li><a href="#">Бельгія</a></li>
+                            <li><a href="#">Ісландія</a></li>
+                            <li><a href="#">Іспанія</a></li>
+                            <li><a href="#">Україна</a></li>
+                            <li><a href="#">Франція</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <div id="content" class="medium-9 large-10 columns main-content-wrapper">
+                    <div>
+                        <div class="row l-box header">
+                            <div class="large-12 columns">
+                                <div class="right social-icons">
+                                    <a href="#"><img src="/assets/images/facebook.png" alt="Facebook"/></a>
+                                    <a href="#"><img src="/assets/images/twitter.png" alt="Twitter" /></a>
+                                    <a href="#"><img src="/assets/images/googleplus.png" alt="Google+" /></a>
+                                    <a href="/rss/"><img src="/assets/images/rss.png" alt="RSS" /></a>
+                                </div>
+                                <hr>
+                                <a href="/tag/mandrivki" class="button tiny">Мандрівки</a>
+                                <a href="/tag/foto" class="button tiny">Фото</a>
+                                <a href="/tag/poradi" class="button tiny">Поради</a>
+                                <a href="/tag/kultura" class="button tiny">Культура</a>
+
+                                <div class="large-6 columns fitWidth search-box">
+                                    <form>
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <div class="row collapse">
+                                                    <div class="small-10 large-5 large-offset-5 columns">
+                                                        <input type="text" placeholder="Шукати...">
+                                                    </div>
+                                                    <div class="small-2 columns">
+                                                        <a href="#" class="button tiny postfix">Знайти</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <section id="content" class="row">
+                            {{{body}}}
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ghost_foot}}
+        
+        <script>
+            var countries = {
+                "Австрія": "",
+                "Ісландія": "islandiia",
+                "Німеччина": "",
+                "Україна": "",
+                "Франція": "",
+            }
+
+            function toCountrySmall(country) {
+                return " <a href='/tag/" + countries[country] + "'><span class='small-text'>"+ country +"</span></a>"
+            }
+            
+            function toCountryBig(country) {
+                return "<li><a href='/tag/" + countries[country] + "'>" + country + "</a></li>";
+            }
+
+            
+            $(function() {
+                $(window).resize(function() {
+                    var height = Math.max(
+                        $(window).height(),
+                        $('#content > div').height(),
+                        $('.content-wrapper > aside').height()
+                    );
+                    $('#content').height(height);
+                });
+                $(window).resize();
+                                
+                $(".articles li").each(function(i, el) {
+                    var tags = $(el).data("tags").split(", ");
+
+                    var t = _.intersection(tags, Object.keys(countries))
+                    .map(function(t) {
+                        return toCountrySmall(t);
+                    });
+                    
+                    $(el).find($(".tags")).html($(t).toArray().join());
+                });
+                
+                $(".country-list").html(
+                    _.map(Object.keys(countries), function(t) { return toCountryBig(t); })
+                );
+            });
+            
+        </script>
+     </body>
+</html>

@@ -1,0 +1,13 @@
+<ul class="medium-block-grid-2 large-block-grid-3 fitWidth articles">
+    {{#foreach posts}}
+    {{#is "home"}}
+    {{#if featured}}
+    {{> block-featured}}
+    {{else}}
+    {{> block-normal}}
+    {{/if}}
+    {{else}}
+    {{> block-normal}}
+    {{/is}}
+    {{/foreach}}
+</ul>
