@@ -154,10 +154,6 @@ article .article-content > p >img:after {
     content: "</div>";
 }
 
-article .article-content > p {
-     margin-left: 200px;   
-}
-
 article .sidenote {
     width: 180px;
     float: left;
@@ -230,16 +226,8 @@ iframe {
      border: none;   
 }
 
-iframe.twitter-tweet {
-    margin-left: 200px !important;   
-}
-
 .small-text {
     font-size: 0.8em;
-}
-
-#livefyre-comments {
-     margin-left: 200px;   
 }
 
 .icon-text {
@@ -267,4 +255,25 @@ iframe.twitter-tweet {
 
 .icon-text.marker {
     background: url(/assets/images/icons/marker.png) left no-repeat;   
+}
+
+@media only screen and (min-width:990px) {
+    iframe.twitter-tweet {
+        margin-left: 200px !important;   
+    }
+    
+    article .article-content > p {
+        margin-left: 200px;   
+    }
+    
+    #livefyre-comments {
+        margin-left: 200px;   
+    }
+}
+
+@media only screen and (max-width:989px) {
+    article .sidenote {
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+    }
 }
