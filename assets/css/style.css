@@ -263,11 +263,12 @@ iframe {
     background: url(/assets/images/icons/marker.png) left no-repeat;   
 }
 
-.large-block-grid-3 > li:nth-of-type(3n+1) {
-    clear: none;
-}
-
-.large-block-grid-2 > li:nth-of-type(2n+1) {
+.small-block-grid-2  > li:nth-of-type(2n+1),
+.small-block-grid-3  > li:nth-of-type(3n+1),
+.medium-block-grid-2 > li:nth-of-type(2n+1),
+.medium-block-grid-3 > li:nth-of-type(3n+1),
+.large-block-grid-2  > li:nth-of-type(2n+1),
+.large-block-grid-3  > li:nth-of-type(3n+1){
     clear: none;
 }
 
