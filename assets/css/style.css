@@ -226,6 +226,14 @@ a.centered-image {
     max-width: none;
 }
 
+iframe {
+     border: none;   
+}
+
+iframe.twitter-tweet {
+    margin-left: 200px !important;   
+}
+
 .small-text {
     font-size: 0.8em;
 }

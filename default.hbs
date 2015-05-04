@@ -119,17 +119,19 @@
                 return "<li><a href='/tag/" + countries[country] + "'>" + country + "</a></li>";
             }
 
+            function resize() {
+                var height = Math.max(
+                    $(window).height(),
+                    $('#content > div').height(),
+                    $('.content-wrapper > aside').height()
+                );
+                $('#content').css("min-height", height);
+            }
             
-            $(function() {
-                $(window).resize(function() {
-                    var height = Math.max(
-                        $(window).height(),
-                        $('#content > div').height(),
-                        $('.content-wrapper > aside').height()
-                    );
-                    $('#content').height(height);
-                });
-                $(window).resize();
+            $(document).ready(function() {
+                $(window).resize(function() { resize(); });
+                $('#content > div').resize(function() { resize(); });
+                resize();
                                 
                 $(".articles li").each(function(i, el) {
                     var tags = $(el).data("tags").split(", ");
