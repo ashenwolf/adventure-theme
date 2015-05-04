@@ -238,6 +238,10 @@ iframe.twitter-tweet {
     font-size: 0.8em;
 }
 
+#livefyre-comments {
+     margin-left: 200px;   
+}
+
 .icon-text {
     color: darkgray;
     font-style: italic;
