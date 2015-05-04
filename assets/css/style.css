@@ -137,7 +137,9 @@ ul.fitWidth, ul.fitHeight {
 }
 
 .articles > li.featured .description {
-    color: white; height: 100%;
+    color: white;
+    height: 100%;
+    text-align: left;
 }
 
 .articles > li.normal .description {
