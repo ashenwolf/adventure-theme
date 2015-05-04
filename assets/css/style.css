@@ -109,7 +109,7 @@ ul.fitWidth, ul.fitHeight {
     float: right;
 }
 
-.articles > li > div.
+.articles > li > div,
 .articles > li.featured .image {
     height: 420px;
     text-align: center;
