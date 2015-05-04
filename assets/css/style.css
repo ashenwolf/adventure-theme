@@ -112,6 +112,9 @@ ul.fitWidth, ul.fitHeight {
 .articles > li > div,
 .articles > li.featured .image {
     height: 420px;
+}
+
+.articles > li.featured .image {
     text-align: center;
     vertical-align: middle;
 }
@@ -139,7 +142,6 @@ ul.fitWidth, ul.fitHeight {
 .articles > li.featured .description {
     color: white;
     height: 100%;
-    text-align: left;
 }
 
 .articles > li.normal .description {
