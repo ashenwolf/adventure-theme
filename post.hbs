@@ -1,7 +1,7 @@
 {{!< default}}
 
 {{#post}}
-              <article class="large-12 columns" style="height: 100%;" itemscope itemtype="http://schema.org/Article">
+            <article class="large-12 columns" style="height: 100%;" itemscope itemtype="http://schema.org/Article">
                 <div class="l-box">
                     <h1 itemprop="headline">{{title}}</h1>
                     <p>
@@ -17,10 +17,16 @@
                     <div class="article-content" itemprop="articleBody">
                     {{content}}
                     </div>
-
+                    
                     {{> block-comments}}
                     
-                    {{> block-author}}
+                        {{> block-prevnext}}
+
+                    <footer>
+                        {{> block-share}}
+
+                        {{> block-author}}
+                    </footer>
                 </div>
             </article>
 {{/post}}
