@@ -1,0 +1,30 @@
+<div class="large-12 columns">
+    <div class="right social-icons">
+        <a href="#"><img src="/assets/images/facebook.png" alt="Facebook"/></a>
+        <a href="#"><img src="/assets/images/twitter.png" alt="Twitter" /></a>
+        <a href="#"><img src="/assets/images/googleplus.png" alt="Google+" /></a>
+        <a href="/rss/"><img src="/assets/images/rss.png" alt="RSS" /></a>
+    </div>
+    <hr>
+
+    {{#foreach navigation}}
+    <a href="{{url absolute="true"}}" class="button tiny">{{label}}</a>
+    {{/foreach}}
+    
+    <div class="large-6 columns fitWidth search-box">
+      <form>
+          <div class="row">
+            <div class="large-12 columns">
+              <div class="row collapse">
+                <div class="small-10 large-5 large-offset-5 columns">
+                  <input type="text" placeholder="Пошук поки не працює :(">
+                </div>
+                <div class="small-2 columns">
+                    <a href="#" class="button tiny postfix">Знайти</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </form>
+  </div>
+</div>

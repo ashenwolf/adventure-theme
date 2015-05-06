@@ -20,6 +20,7 @@
 
         <link rel="stylesheet" href="/assets/css/normalize.css">
         <link rel="stylesheet" href="/assets/css/foundation.css">
+        <link rel="stylesheet" href="/assets/css/icono.min.css">
         <link rel="stylesheet" href="/assets/css/style.css">
 
         <script src="/assets/js/vendor/modernizr.js"></script>
@@ -70,36 +71,7 @@
                 <div id="content" class="medium-9 large-10 columns main-content-wrapper">
                     <div>
                         <div class="row l-box header">
-                            <div class="large-12 columns">
-                                <div class="right social-icons">
-                                    <a href="#"><img src="/assets/images/facebook.png" alt="Facebook"/></a>
-                                    <a href="#"><img src="/assets/images/twitter.png" alt="Twitter" /></a>
-                                    <a href="#"><img src="/assets/images/googleplus.png" alt="Google+" /></a>
-                                    <a href="/rss/"><img src="/assets/images/rss.png" alt="RSS" /></a>
-                                </div>
-                                <hr>
-                                <a href="/tag/mandrivki" class="button tiny">Мандрівки</a>
-                                <a href="/tag/foto" class="button tiny">Фото</a>
-                                <a href="/tag/poradi" class="button tiny">Поради</a>
-                                <a href="/tag/kultura" class="button tiny">Культура</a>
-
-                                <div class="large-6 columns fitWidth search-box">
-                                    <form>
-                                        <div class="row">
-                                            <div class="large-12 columns">
-                                                <div class="row collapse">
-                                                    <div class="small-10 large-5 large-offset-5 columns">
-                                                        <input type="text" placeholder="Шукати...">
-                                                    </div>
-                                                    <div class="small-2 columns">
-                                                        <a href="#" class="button tiny postfix">Знайти</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                            {{navigation}}
                         </div>
                         <section id="content" class="row">
                             {{{body}}}

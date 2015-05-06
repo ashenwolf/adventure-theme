@@ -218,11 +218,11 @@ ul.fitWidth, ul.fitHeight {
 }
 
 article .article-content > p > img:before {
-    content: "<div class='fitImage'>";
+    content: "";
 }
 
 article .article-content > p >img:after {
-    content: "</div>";
+    content: "";
 }
 
 article .sidenote {
@@ -358,9 +358,6 @@ iframe {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-}
-
-.read-next-story.prev {
 }
 
 .read-next-story .post {
