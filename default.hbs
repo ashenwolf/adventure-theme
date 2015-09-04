@@ -23,11 +23,6 @@
         <link rel="stylesheet" href="/assets/css/icono.min.css">
         <link rel="stylesheet" href="/assets/css/style.css">
 
-        <script src="/assets/js/vendor/modernizr.js"></script>
-        <script src="/assets/js/vendor/jquery.js"></script>
-        <script src="/assets/js/vendor/underscore-min.js"></script>
-        <script src="/assets/js/foundation.min.js"></script>
-
         {{ghost_head}}
     </head>
     <body class="{{body_class}}" style="background: url({{@blog.cover}}) no-repeat; background-size: cover; background-attachment: fixed;">
@@ -81,6 +76,11 @@
             </div>
         </div>
         {{ghost_foot}}
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="/assets/js/vendor/modernizr.js"></script>
+        <script src="/assets/js/vendor/underscore-min.js"></script>
+        <script src="/assets/js/foundation.min.js"></script>
         
         <script>
             function toCountrySmall(country) {
