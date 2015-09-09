@@ -163,7 +163,18 @@ ul.fitWidth, ul.fitHeight {
 }
 
 .about {
-    height: 420px; background-color: #373832;
+    background-color: #373832;
+}
+
+@media only screen and (min-width: 64.063em) {
+    .about {
+        height: 420px;
+    }
+}
+
+.about p {
+    color: #e0e0e0;
+    font-style: italic;
 }
 
 .social-icons > a {
