@@ -242,7 +242,7 @@ article .article-content .fitImage {
 }
 
 article .article-content .fitImage:after {
-    content: '>\0000a0';
+    content: '\0000a0';
 }
 
 article .article-content .fitImage.two img {
