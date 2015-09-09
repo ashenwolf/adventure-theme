@@ -240,6 +240,21 @@ article .article-content .fitImage {
     margin: 2em -2.15em;
 }
 
+article .article-content .fitImage.two img {
+    float: left;
+    width: 50%;
+}
+
+article .article-content .fitImage.three img {
+    float: left;
+    width: 33.3333%;
+}
+
+article .article-content .fitImage.four img {
+    float: left;
+    width: 25%;
+}
+
 .pagination {
     height: 32px;
     vertical-align: middle;
