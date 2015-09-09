@@ -238,6 +238,11 @@ article .article-content > .sidenote > p {
 
 article .article-content .fitImage {
     margin: 2em -2.15em;
+    line-height: 0px;
+}
+
+article .article-content .fitImage:after {
+    content: '>\0000a0';
 }
 
 article .article-content .fitImage.two img {
