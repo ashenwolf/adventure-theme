@@ -34,7 +34,32 @@
 {{> block-pagination}}
 
 <script>
-    $(document).ready(function () {
-        $(".article-content > p > img").parent('p').addClass("fitImage");
+$(document).ready(function () {
+  $(".article-content > p > img").parent('p').addClass("fitImage");
+});
+
+function initMap() {
+  var geocoder = new google.maps.Geocoder();
+  $(".map-block").each(function(i, mapBlock) {
+    var mapDiv = $("<div></div>")
+    	.css("height", "100%")
+    	.addClass("map-holder");
+   	$(mapBlock).append(mapDiv);
+    var map = new google.maps.Map(mapDiv[0], {
+      zoom: $(mapBlock).data("zoom"),
+      center: new google.maps.LatLng(0.0, 0.0)
     });
+    geocoder.geocode( { 'address': $(mapBlock).data("address") }, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+          title: $(mapBlock).data("title")
+        });
+      }
+    });
+  }) 
+}
 </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
