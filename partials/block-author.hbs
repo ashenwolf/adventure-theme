@@ -3,10 +3,10 @@
 <div class="author">
     <address style="text-align: center;" itemscope itemtype="http://schema.org/Person">
         <hr>
-        {{#if image}}
+        {{#if profile_image}}
         <div style="display: inline-block; border: solid #ccc 1px; border-radius: 50%; margin-top: -48px;">
             <a href="{{url}}" style="display: inline-block; border: solid white 4px; border-radius: 50%; float: left; overflow: hidden; height: 80px; width: 80px; ">
-                <img src="{{image}}" alt="{{name}}"  itemprop="image" />
+                <img src="{{img_url profile_image}}" alt="{{name}}"  itemprop="image" />
             </a>
         </div>
         {{/if}}

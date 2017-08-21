@@ -13,24 +13,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>{{meta_title}}</title>
-        <meta name="description" content="{{meta_description}}" />
 
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="/assets/css/normalize.css">
-        <link rel="stylesheet" href="/assets/css/foundation.css">
-        <link rel="stylesheet" href="/assets/css/icono.min.css">
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="{{asset 'css/normalize.css'}}">
+        <link rel="stylesheet" href="{{asset 'css/foundation.css'}}">
+        <link rel="stylesheet" href="{{asset 'css/icono.min.css'}}">
+        <link rel="stylesheet" href="{{asset 'css/style.css'}}">
 
-        <script src="/assets/js/vendor/jquery.js"></script>
-        <script src="/assets/js/vendor/modernizr.js"></script>
-        <script src="/assets/js/vendor/underscore-min.js"></script>
-        <script src="/assets/js/foundation.min.js"></script>
+        <script src="{{asset 'js/vendor/jquery.js'}}"></script>
+        <script src="{{asset 'js/vendor/modernizr.js'}}"></script>
+        <script src="{{asset 'js/vendor/underscore-min.js'}}"></script>
+        <script src="{{asset 'js/foundation.min.js'}}"></script>
         
         {{ghost_head}}
     </head>
-    <body class="{{body_class}}" style="background: url({{@blog.cover}}) no-repeat; background-size: cover; background-attachment: fixed;">
+    <body class="{{body_class}}" style="background: url({{@blog.cover_image}}) no-repeat; background-size: cover; background-attachment: fixed;">
         <div class="page-wrapper">
             <div class="row fullWidth content-wrapper">
                 <aside class="medium-3 large-2 columns fitWidth">
