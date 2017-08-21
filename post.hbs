@@ -36,6 +36,11 @@
 <script>
 $(document).ready(function () {
   $(".article-content > p > img").parent('p').addClass("fitImage");
+
+  $("div.fitImage").each(function(i, img) {
+    var images = $(img).find("img").length;
+    $(img).addClass(images === 2 ? "two" : images === 3 ? "three" : images === 4 ? "four" : "" );
+  });  
 });
 
 function initMap() {
@@ -62,4 +67,3 @@ function initMap() {
   }) 
 }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
