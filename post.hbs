@@ -35,7 +35,7 @@
 
 <script>
 $(document).ready(function () {
-  $(".article-content p > img").parent('p').addClass("fitImage");
+  $(".article-content > .kg-card-markdown > p > img").parent('p').addClass("fitImage");
 
   $("div.fitImage").each(function(i, img) {
     var images = $(img).find("img").length;

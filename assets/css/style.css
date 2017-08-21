@@ -228,11 +228,11 @@ ul.fitWidth, ul.fitHeight {
     height: 300px;
 }
 
-article .article-content > p > img:before {
+article .article-content > .kg-card-markdown > p > img:before {
     content: "";
 }
 
-article .article-content > p >img:after {
+article .article-content > .kg-card-markdown > p >img:after {
     content: "";
 }
 
@@ -240,10 +240,10 @@ article .sidenote {
     width: 180px;
     float: left;
     font-style: italic;
-    margin-bottom: 1em;
+    margin: 0 1em 1em 0;
 }
 
-article .article-content > .sidenote > p {
+article .article-content > .kg-card-markdown .sidenote > p {
      margin-left: 0;
 }
 
@@ -451,7 +451,7 @@ iframe {
         margin-left: 200px !important;   
     }
     
-    article .article-content > p {
+    article .article-content  > .kg-card-markdown > p {
         margin-left: 200px;   
     }
     
