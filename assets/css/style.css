@@ -248,7 +248,7 @@ article .article-content > .kg-card-markdown .sidenote > p {
 }
 
 article .article-content .fitImage {
-    margin: 2em -2.15em;
+    margin: 2em -2.15em !important;
     line-height: 0px;
 }
 
