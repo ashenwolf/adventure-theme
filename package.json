@@ -1,7 +1,10 @@
 {
     "name": "adventure",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": {
-    	"email": "sergii.gulenok@gmail.com"
+        "email": "sergii.gulenok@gmail.com"
+    },
+    "config": {
+        "posts_per_page": 7
     }
 }
